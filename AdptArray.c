@@ -37,22 +37,24 @@ void DeleteAdptArray(PAdptArray arr) {
 }
 
 Result SetAdptArrayAt(PAdptArray arr, int index, PElement elem) {
-    PElement *newArr;
+    PElement *newArr=NULL;
     if (!arr) {
         return FAIL;
     }
     if (arr->ArrSize <= index) {
         if (!arr->pEArr) {
-            arr->pEArr = (PElement *) malloc(sizeof(PElement) * (index + 1));
-        } else {
-            newArr = realloc(arr->pEArr, sizeof(PElement) * (index + 1));
-            if (!newArr) {
+            arr->pEArr = (PElement*)calloc((index + 1), sizeof(PElement));
+            if(!arr->pEArr){
                 return FAIL;
             }
-        }
-        for (int i = arr->ArrSize; i < index + 1; ++i) {
-            arr->pEArr[i] = NULL;
-
+        } else {
+            newArr = (PElement*)calloc((index + 1), sizeof(PElement));
+            if(!newArr) {
+                return FAIL;
+            }
+            memcpy(newArr, arr->pEArr, (arr->ArrSize) * sizeof(PElement));
+            free(arr->pEArr);
+            arr->pEArr = newArr;
         }
         arr->pEArr[index] = arr->copyFunc(elem);
         arr->ArrSize = index + 1;
@@ -91,7 +93,7 @@ void PrintDB(PAdptArray arr){
         return;
     }
     for (int i = 0; i <arr->ArrSize ; i++) {
-        if(arr->pEArr[i]){
+        if(arr->pEArr[i]!=NULL){
             arr->printFunc(arr->pEArr[i]);
         }
     }
