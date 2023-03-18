@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include "AdptArray.h"
 
+
 typedef struct AdptArray_ {
     int ArrSize;
     PElement *pEArr;
@@ -13,8 +14,9 @@ typedef struct AdptArray_ {
 
 PAdptArray CreateAdptArray(COPY_FUNC copy, DEL_FUNC del, PRINT_FUNC print) {
     PAdptArray arr = (PAdptArray) malloc(sizeof(AdptArray));
-    if (!arr)
+    if (!arr) {
         return NULL;
+    }
     arr->ArrSize = 0;
     arr->pEArr = NULL;
     arr->delFunc = del;
@@ -33,6 +35,7 @@ void DeleteAdptArray(PAdptArray arr) {
             arr->delFunc(arr->pEArr[i]);
         }
     }
+    free(arr->pEArr);
     free(arr);
 }
 
