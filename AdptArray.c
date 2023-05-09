@@ -13,6 +13,9 @@ typedef struct AdptArray_ {
 } AdptArray, *PAdptArray;
 
 PAdptArray CreateAdptArray(COPY_FUNC copy, DEL_FUNC del, PRINT_FUNC print) {
+    if(!copy||!del||!print){
+        return NULL;
+    }
     PAdptArray arr = (PAdptArray) malloc(sizeof(AdptArray));
     if (!arr) {
         return NULL;
@@ -40,6 +43,7 @@ void DeleteAdptArray(PAdptArray arr) {
     //delete the array and then the struct
     free(arr->pEArr);
     free(arr);
+    arr=NULL;
 }
 
 Result SetAdptArrayAt(PAdptArray arr, int index, PElement elem) {

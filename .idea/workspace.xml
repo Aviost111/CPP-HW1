@@ -21,9 +21,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fe154c9a-b07a-42dc-8057-d0ce17ee6b16" name="Changes" comment="">
+    <list default="true" id="fe154c9a-b07a-42dc-8057-d0ce17ee6b16" name="Changes" comment=".">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AdptArray.c" beforeDir="false" afterPath="$PROJECT_DIR$/AdptArray.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo.c" beforeDir="false" afterPath="$PROJECT_DIR$/Demo.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +43,12 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -76,11 +83,6 @@
   }
 }</component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="CPP-HW1" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CPP-HW1" TARGET_NAME="CPP-HW1" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="CPP-HW1" RUN_TARGET_NAME="CPP-HW1">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -101,7 +103,9 @@
       <workItem from="1678988854873" duration="2000" />
       <workItem from="1679169726698" duration="3174000" />
       <workItem from="1679600422041" duration="43000" />
-      <workItem from="1683561599656" duration="875000" />
+      <workItem from="1683561599656" duration="1002000" />
+      <workItem from="1683619249534" duration="741000" />
+      <workItem from="1683645285939" duration="2529000" />
     </task>
     <task id="LOCAL-00001" summary=".">
       <created>1678988833007</created>
@@ -124,7 +128,21 @@
       <option name="project" value="LOCAL" />
       <updated>1679171996547</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary=".">
+      <created>1683562476228</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1683562476228</updated>
+    </task>
+    <task id="LOCAL-00005" summary=".">
+      <created>1683562486290</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1683562486290</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -144,9 +162,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/Demo.c</url>
-          <line>17</line>
-          <option name="timeStamp" value="2" />
+          <url>file://$PROJECT_DIR$/test.c</url>
+          <line>45</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
